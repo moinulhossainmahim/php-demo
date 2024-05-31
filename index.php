@@ -6,11 +6,17 @@
     <title>Php For Dummies</title>
   </head>
   <body>
+    <?php
+      $age = 17;
+
+      if ($age >= 18) {
+        $message = "You are allowed to marry in BD";
+      } else {
+        $message = "You are not allowed to marry in BD";
+      }
+    ?>
     <h1>
-      <?php
-        $greetings = 'Welcome';
-        echo "$greetings from php!";
-      ?>
+      <?= $message; ?>
     </h1>
   </body>
 </html>
