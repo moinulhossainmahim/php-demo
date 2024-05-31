@@ -30,5 +30,30 @@
         </li>
       <?php endforeach; ?>
     </ul>
+
+    <h1>Languages and their creators</h1>
+    <?php
+      $langsWithCreators = [
+        [
+          'name' => 'JavaScript',
+          'creator' => 'Brendan Eich'
+        ],
+        [
+          'name' => 'PHP',
+          'creator' => 'Rasmus Lerdorf'
+        ],
+        [
+          'name' => 'Java',
+          'creator' => 'James Gosling'
+        ]
+      ];
+    ?>
+    <ul>
+      <?php foreach( $langsWithCreators as $lang) : ?>
+        <li>
+          <?= $lang['name'] ?>
+        </li>
+      <?php endforeach ?>
+    </ul>
   </body>
 </html>
