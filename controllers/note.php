@@ -1,6 +1,7 @@
 <?php
 
   $heading = 'Note';
+  $currentUser = 1;
   $config = require('config.php');
   $db = new Database($config['database']);
 
@@ -12,8 +13,8 @@
     abort();
   }
 
-  if ($note['user_id'] !== 1) {
-    abort(403);
+  if ($note['user_id'] !== $currentUser) {
+    abort(Response::FORBIDDEN);
   }
 
   require 'views/note.view.php';
