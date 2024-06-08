@@ -1,5 +1,7 @@
 <?php
 
+  use Core\Database;
+
   $heading = 'Note';
   $currentUser = 1;
   $config = require base_path('config.php');
