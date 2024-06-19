@@ -3,7 +3,7 @@
   return [
     'database' => [
       'user' => 'root',
-      'host' => '127.0.0.1',
+      'host' => 'mysql-db',
       'port' => 3306,
       'dbname' => 'demo',
       'password' => 'Mysql123@',

@@ -11,6 +11,8 @@
     require base_path($class . '.php');
   });
 
+  require base_path('bootstrap.php');
+
   $router = new Router();
 
   $routes = require base_path('routes.php');

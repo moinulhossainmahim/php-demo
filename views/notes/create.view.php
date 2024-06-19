@@ -5,7 +5,7 @@
   <main>
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
       <h1 class="mb-6">Create a note</h1>
-      <form method="POST">
+      <form method="POST" action="/notes">
         <div class="space-y-12">
           <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
             <div class="col-span-full">
