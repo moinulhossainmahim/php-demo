@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  mysql-db:
+    image: mysql:latest
+    container_name: mysql-db
+    environment:
+      MYSQL_ROOT_PASSWORD: Mysql123@
+      MYSQL_DATABASE: demo
+    ports:
+      - "3306:3306"
+    restart: unless-stopped
+
+  php-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: php-app
+    ports:
+      - "8080:8000"
+    restart: unless-stopped
+    depends_on:
+      - mysql-db
+    volumes:
+      - .:/usr/src/myapp
