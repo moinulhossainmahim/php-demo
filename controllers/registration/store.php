@@ -23,7 +23,6 @@
 		]);
 	}
 
-
 	$db = App::resolve(Database::class);
 
 	$user = $db->query('select * from users where email = :email', [
@@ -39,9 +38,9 @@
 			'password' => password_hash($password, PASSWORD_BCRYPT)
 		]);
 
-		$_SESSION['user'] = [
-			'email' => $email
-		];
+		login([
+			'email' => $email,
+		]);
 
 		header('location: /');
 		exit();
