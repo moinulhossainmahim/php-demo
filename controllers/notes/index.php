@@ -4,7 +4,7 @@
   use Core\Database;
 
   $heading = 'Notes';
-  
+
   $db = App::resolve(Database::class);
 
   $notes = $db->query('select * from notes where user_id = 1')->get();
